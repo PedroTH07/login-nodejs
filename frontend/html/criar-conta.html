@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>criar conta</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="pai">
+    <div class="corpoLogin">
+      <h1>criar conta</h1>
+      <div class="login">
+        <p>nome:</p>
+        <input type="text" placeholder="nome">
+        
+        <p>e-mail:</p>
+        <input type="text" placeholder="e-mail">
+        
+        <p>senha:</p>
+        <div class="inputContainer">
+          <input type="password" placeholder="senha" id="senha1">
+          <button onclick="mostrarSenha('senha1')"><img src="../img/olho_senha.png" alt="imagem de um olho" height="37px" width="40px"></button>
+        </div>
+        
+        <p>comfirmar senha:</p>
+        <div class="inputContainer">
+          <input type="password" placeholder="confirmar senha" id="senha2">
+          <button onclick="mostrarSenha('senha2')"><img src="../img/olho_senha.png" alt="imagem de um olho" height="37px" width="40px"></button>
+        </div>
+
+        <button type="submit" class="submit">confirmar</button>
+        <div class="outraPagina">
+          <p>já tem uma conta? <a href="login.html">clique aqui</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="../js/main.js"></script>
+</body>
+
+</html>

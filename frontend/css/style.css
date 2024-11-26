@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 20pt;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #14202A;
+}
+
+.pai {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.corpoLogin {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 500px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px, 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15pt;
+  outline: none;
+}
+
+h1 {
+  margin: 10px;
+}
+
+p {
+  margin: 10px;
+}
+
+.outraPagina {
+  font-size: 10pt;
+  color: rgb(82, 81, 81);
+}
+
+.submit {
+  font-size: 15pt;
+  padding: 15px;
+  border-radius: 40px;
+  margin: 20px;
+  color: white;
+  background-color: #14202A;
+  border: 0;
+  width: 90%;
+  font-weight: bold;
+  transition: ease-in 0.2s;
+}
+
+button:hover {
+  color: #14202A;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.inputContainer {
+  border: 1px solid #ccc;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 95%;
+}
+
+.inputContainer input {
+  border: none;
+}
+
+.inputContainer button {
+  border: none;
+  padding: 5px;
+  background-color: #ccc;
+  transition: ease-in 0.2s;
+}
+
+.inputContainer button:hover {
+  background-color: #797979;
+  cursor: pointer;
+}
