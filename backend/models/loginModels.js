@@ -14,3 +14,9 @@ export async function getUmaConta(Email) {
     const userEmail = await colecao.findOne({ email: Email });
     return userEmail;
 }
+
+export async function postConta(novaConta) {
+    const db = conexao.db('projeto-login-node');
+    const colecao = db.collection('contas');
+    return colecao.insertOne(novaConta)
+}
