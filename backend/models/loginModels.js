@@ -8,9 +8,9 @@ export async function getContas() {
     return colecao.find().toArray();
 };
 
-export async function getUmaConta(email) {
+export async function getUmaConta(Email) {
     const db = conexao.db('projeto-login-node');
     const colecao = db.collection('contas');
-    const userEmail = await colecao.findOne({ email });
+    const userEmail = await colecao.findOne({ email: Email });
     return userEmail;
 }
