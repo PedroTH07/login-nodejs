@@ -12,9 +12,9 @@ export async function pegarUmaConta(req, res) {
 };
 
 export async function criarConta(req, res) {
-    const nome = '';
-    const email = '';
-    const senha = '';
+    const nome = req.params.nome;
+    const email = req.params.email;
+    const senha = req.params.senha;
 
     const novaConta = {
         nome: nome,
@@ -22,8 +22,12 @@ export async function criarConta(req, res) {
         senha: senha
     };
     try {
-        const contaCriada = await postConta(novaConta);
-        res.status(200).json(contaCriada);
+        if (await getUmaConta(email)) {
+            res.status(400).json({'erro':'email já cadastrado'})
+        } else {
+            const contaCriada = await postConta(novaConta);
+            res.status(200).json(contaCriada);
+        }
     } catch (erro) {
         console.error('erro', erro.message);
         res.status(500).json({'erro':'falha na requisição'});

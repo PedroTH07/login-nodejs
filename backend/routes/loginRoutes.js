@@ -6,5 +6,5 @@ export function routes(app) {
 
     app.get('/login', listarContas);
     app.get('/login/:email', pegarUmaConta);
-    app.post('/criar', criarConta);
+    app.post('/criar/:nome/:email/:senha', criarConta);
 };
