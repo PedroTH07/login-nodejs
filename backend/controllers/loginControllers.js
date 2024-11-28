@@ -12,15 +12,8 @@ export async function pegarUmaConta(req, res) {
 };
 
 export async function criarConta(req, res) {
-    const nome = req.params.nome;
-    const email = req.params.email;
-    const senha = req.params.senha;
-
-    const novaConta = {
-        nome: nome,
-        email: email,
-        senha: senha
-    };
+    const novaConta = req.body;
+    const email = novaConta.email
     try {
         if (await getUmaConta(email)) {
             res.status(400).json({'erro':'email já cadastrado'})
