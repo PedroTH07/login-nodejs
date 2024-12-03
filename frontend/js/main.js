@@ -9,19 +9,21 @@ function mostrarSenha(idSenha) {
     }
 };
 
-async function acharContas() {
+async function acharConta() {
     try {
-        const response = await fetch('localhost:3000/login');
-        const data = await response.json();
-        window.alert(data)
+        const inputEmail = document.getElementById('emailGet');
+        const emailGet = inputEmail.value;
+        if (emailGet === "") {
+            console.log('insira um email');
+        } else {
+            const response = await fetch(`http://localhost:3000/login/${emailGet}`);
+            const data = await response.json();
+            console.log(data);
+        }
     } catch (error) {
-        console.error('erro', error)
+        console.error('erro', error.message);
     }
 };
 
-const submit = document.getElementsByClassName('submit');
-
-for (let i = 0; i < submit.length; i++) {
-    const element = submit[i];
-    element.addEventListener('click', acharContas);
-}
+const btnLogin =  document.getElementById('btnLogin');
+btnLogin.addEventListener('click', acharConta);
