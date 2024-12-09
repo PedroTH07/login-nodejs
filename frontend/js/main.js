@@ -25,16 +25,30 @@ async function acharConta() {
 
                 if (senhaGet === senhaUser) {
                     window.alert('login bem sucedido');
-                } else { window.alert('senha incorreta') };
+                    return data;
+                } else { window.alert('senha incorreta') 
+                    return false;
+                };
+
             } catch (error) {
                 window.alert('email não encontrado');
+                return false;
             }
 
         }
     } catch (error) {
         console.error('erro', error.message);
+        return false;
     }
 };
 
+async function login() {
+    const user = await acharConta();
+    if (user) {
+        localStorage.setItem('userId', user._id);
+        window.location.href = 'http://127.0.0.1:5500/frontend/html/homepage.html';
+    } else { window.alert('algo deu errado') };
+};
+
 const btnLogin =  document.getElementById('btnLogin');
-btnLogin.addEventListener('click', acharConta);
+btnLogin.addEventListener('click', login);
