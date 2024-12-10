@@ -1,11 +1,14 @@
 import conectarAoBanco from "../config/dbConfig.js";
+import { ObjectId } from "mongodb";
 
 const conexao =  await conectarAoBanco(process.env.STRING_CONEXAO);
 
-export async function getContas() {
+export async function getContaId(id) {
     const db = conexao.db('projeto-login-node');
     const colecao = db.collection('contas');
-    return colecao.find().toArray();
+    const objId = ObjectId.createFromHexString(id)
+    const userId = await colecao.findOne({ _id: new ObjectId(objId) })
+    return userId;
 };
 
 export async function getUmaConta(Email) {

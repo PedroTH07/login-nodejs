@@ -24,7 +24,6 @@ async function acharConta() {
                 const senhaUser = data.senha;
 
                 if (senhaGet === senhaUser) {
-                    window.alert('login bem sucedido');
                     return data;
                 } else { window.alert('senha incorreta') 
                     return false;
@@ -47,7 +46,7 @@ async function login() {
     if (user) {
         localStorage.setItem('userId', user._id);
         window.location.href = 'http://127.0.0.1:5500/frontend/html/homepage.html';
-    } else { window.alert('algo deu errado') };
+    }
 };
 
 const btnLogin =  document.getElementById('btnLogin');

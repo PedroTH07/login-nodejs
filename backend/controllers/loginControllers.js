@@ -1,8 +1,9 @@
-import { getContas, getUmaConta, postConta } from "../models/loginModels.js";
+import { getContaId, getUmaConta, postConta } from "../models/loginModels.js";
 
-export async function listarContas(req, res) {
-    const contas = await getContas();
-    res.status(200).json(contas);
+export async function pegarContaId(req, res) {
+    const id = req.params.id
+    const conta = await getContaId(id);
+    res.status(200).json(conta);
 };
 
 export async function pegarUmaConta(req, res) {
