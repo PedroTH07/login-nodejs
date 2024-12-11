@@ -33,6 +33,6 @@ if (userId) {
 
     btnLogout.innerHTML = 'entrar'
     btnLogout.addEventListener('click', () => {
-        document.location.href = 'login.html'
+        document.location.href = 'index.html'
     })
 };
