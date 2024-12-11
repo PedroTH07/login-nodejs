@@ -45,7 +45,7 @@ async function login() {
     const user = await acharConta();
     if (user) {
         localStorage.setItem('userId', user._id);
-        window.location.href = 'http://127.0.0.1:5500/frontend/html/homepage.html';
+        window.location.href = 'homepage.html';
     }
 };
 
