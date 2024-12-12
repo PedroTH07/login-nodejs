@@ -1,6 +1,5 @@
 const userId = localStorage.getItem('userId');
-console.log(userId)
-const btnLogout = document.getElementById('btnConta')
+const btnLogout = document.getElementById('btnConta');
 
 if (userId) {
     async function fetchData() {
@@ -33,6 +32,6 @@ if (userId) {
 
     btnLogout.innerHTML = 'entrar'
     btnLogout.addEventListener('click', () => {
-        document.location.href = '../index.html'
+        document.location.href = '../index.html';
     })
 };
