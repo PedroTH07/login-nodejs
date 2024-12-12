@@ -24,7 +24,7 @@
   },
   "contributors": [],
   "scripts": {
-    "dev": "node --watch backend/server.js",
+    "dev": "node --watch --env-file=.env backend/server.js",
     "test": ""
   },
   "dependencies": {
