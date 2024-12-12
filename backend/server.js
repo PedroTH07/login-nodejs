@@ -6,5 +6,5 @@ const app = express();
 routes(app);
 
 app.listen(port, () => {
-    console.log('servirdor escutando...');
+    console.log(`servirdor esccutando na porta ${port}`);
 });
