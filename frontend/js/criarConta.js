@@ -28,7 +28,7 @@ async function criarConta() {
             return false;
         } else {
             try {
-                const response = await fetch('http://localhost:3000/criar', {
+                const response = await fetch('https://login-nodejs-api.onrender.com/criar', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({

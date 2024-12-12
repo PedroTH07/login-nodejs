@@ -5,7 +5,7 @@ const btnLogout = document.getElementById('btnConta')
 if (userId) {
     async function fetchData() {
         try {
-            const response = await fetch(`http://localhost:3000/getInfo/${userId}`);
+            const response = await fetch(`https://login-nodejs-api.onrender.com/getInfo/${userId}`);
             const data = await response.json();
             return data;
         } catch (error) {

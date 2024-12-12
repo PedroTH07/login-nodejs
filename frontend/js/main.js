@@ -16,7 +16,7 @@ async function acharConta() {
         if (emailGet === "") {
             window.alert('insira um email');
         } else {
-            const response = await fetch(`http://localhost:3000/login/${emailGet}`);
+            const response = await fetch(`https://login-nodejs-api.onrender.com/login/${emailGet}`);
             const data = await response.json();
             const inputSenha = document.getElementById('senha3');
             const senhaGet = inputSenha.value;
