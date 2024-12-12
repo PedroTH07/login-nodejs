@@ -1,9 +1,10 @@
 import express from 'express';
 import { routes } from './routes/loginRoutes.js';
+const port = process.env.PORT || 3000
 
 const app = express();
 routes(app);
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('servirdor escutando...');
 });
