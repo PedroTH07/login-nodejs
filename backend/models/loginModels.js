@@ -17,10 +17,18 @@ export async function getUmaConta(Email) {
     const colecao = db.collection('contas');
     const userEmail = await colecao.findOne({ email: Email });
     return userEmail;
-}
+};
 
 export async function postConta(novaConta) {
     const db = conexao.db('projeto-login-node');
     const colecao = db.collection('contas');
     return colecao.insertOne(novaConta)
-}
+};
+
+export async function updateConta(contaDesatualizada, dadosAtualizados) {
+    const db = conexao.db('projeto-login-node');
+    const colecao = db.collection('contas');
+    const objId = ObjectId.createFromHexString(contaDesatualizada)
+    const contaAtualizada = colecao.updateOne({_id: new ObjectId(objId)}, {$set:dadosAtualizados});
+    return contaAtualizada;
+};

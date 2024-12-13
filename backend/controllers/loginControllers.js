@@ -1,4 +1,4 @@
-import { getContaId, getUmaConta, postConta } from "../models/loginModels.js";
+import { getContaId, getUmaConta, postConta, updateConta } from "../models/loginModels.js";
 
 export async function pegarContaId(req, res) {
     const id = req.params.id
@@ -26,4 +26,16 @@ export async function criarConta(req, res) {
         console.error('erro', erro.message);
         res.status(500).json({'erro':'falha na requisição'});
     };
-}
+};
+
+export async function atualizarConta(req, res) {
+    const contaDesatualizada = req.params.id;
+    const dadosAtualizados = req.body;
+    try {
+        const contaAtualizada = await updateConta(contaDesatualizada, dadosAtualizados);
+        res.status(200).json(contaAtualizada);
+    } catch (error) {
+        console.error('erro', error.message);
+        res.status(500).json({'erro': 'falha na requisição'});
+    }
+};

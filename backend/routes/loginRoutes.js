@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { criarConta, pegarContaId, pegarUmaConta } from "../controllers/loginControllers.js";
+import { atualizarConta, criarConta, pegarContaId, pegarUmaConta } from "../controllers/loginControllers.js";
 
 const allowedOrigins = ['https://login-nodejs-brown.vercel.app']
 
@@ -13,4 +13,5 @@ export function routes(app) {
     app.get('/getInfo/:id', pegarContaId);
     app.get('/login/:email', pegarUmaConta);
     app.post('/criar', criarConta);
+    app.put('/update/:id', atualizarConta);
 };
