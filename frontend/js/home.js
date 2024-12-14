@@ -29,7 +29,7 @@ if (userId) {
     btnLogout.addEventListener('click', logout);
 
     btnAtualizar.addEventListener('click', () => {
-        const painel = document.getElementById('painel');;
+        const painel = document.getElementById('painel');
         if (painel.style.display === 'none') {
             painel.style.display = 'block';
         };
