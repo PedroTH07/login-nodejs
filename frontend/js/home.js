@@ -30,16 +30,13 @@ if (userId) {
 
     btnAtualizar.addEventListener('click', () => {
         const painel = document.getElementById('painel');
-        if (painel.style.display === 'none') {
-            painel.style.display = 'block';
-        };
+        painel.style.display = 'block';
     });
 
-    btnSair.addEventListener('click', () => {
+    btnSair.addEventListener('click', (event) => {
         const painel = document.getElementById('painel');
-        if (painel.style.display === 'block') {
-            painel.style.display = 'none';
-        };
+        painel.style.display = 'none';
+        event.stopPropagation();
     });
 
 } else {
