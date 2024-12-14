@@ -8,6 +8,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #14202A;
     color: white;
+    z-index: 1;
 }
 
 .body {
@@ -73,4 +74,116 @@ h1, h2, hr {
 
 p {
   margin: 10px;
+}
+
+#atualizar {
+  display: flexbox;
+  justify-items: center;
+}
+
+#btnAtualizacao {
+  padding: 10px;
+  margin: 40px;
+  color: #14202A;
+  background-color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  width: 300px;
+  transition: ease 0.3s;
+}
+
+#btnAtualizacao:hover {
+  cursor: pointer;
+  background-color: #868686;
+}
+
+#painel {
+  background-color: white;
+  color: black;
+  padding: 35px;
+  border-radius: 10px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+#painelHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+#btnSair {
+  color: rgb(82, 81, 81);
+  border: none;
+  background-color: white;
+  font-size: 1em;
+  height: 20pt;
+}
+
+#btnSair:hover {
+  cursor: pointer;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px, 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15pt;
+  outline: none;
+}
+
+#info {
+  color: rgb(82, 81, 81);
+  font-size: 0.9em;
+  padding: 10px;
+}
+
+#btnConfirmar {
+  font-size: 20pt;
+  padding: 15px;
+  border-radius: 40px;
+  margin: 30px;
+  color: white;
+  background-color: #14202A;
+  border: 0;
+  width: 90%;
+  font-weight: bold;
+  transition: ease-in 0.2s;
+}
+
+#btnConfirmar:hover {
+  color: #14202A;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.inputContainer {
+  border: 1px solid #ccc;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 95%;
+}
+
+.inputContainer input {
+  border: none;
+}
+
+.inputContainer button {
+  border: none;
+  padding: 5px;
+  background-color: #ccc;
+  transition: ease-in 0.2s;
+}
+
+.inputContainer button:hover {
+  background-color: #797979;
+  cursor: pointer;
 }

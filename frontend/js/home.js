@@ -1,5 +1,7 @@
 const userId = localStorage.getItem('userId');
 const btnLogout = document.getElementById('btnConta');
+const btnAtualizar = document.getElementById('btnAtualizacao');
+const btnSair = document.getElementById('btnSair')
 
 if (userId) {
     async function fetchData() {
@@ -25,7 +27,23 @@ if (userId) {
         window.location.reload();
     }
     btnLogout.addEventListener('click', logout);
+
+    btnAtualizar.addEventListener('click', () => {
+        const painel = document.getElementById('painel');;
+        if (painel.style.display === 'none') {
+            painel.style.display = 'block';
+        };
+    });
+
+    btnSair.addEventListener('click', () => {
+        const painel = document.getElementById('painel');
+        if (painel.style.display === 'block') {
+            painel.style.display = 'none';
+        };
+    });
+
 } else {
+    btnAtualizar.style.display = 'none'
     document.getElementById('nome_res').innerHTML = `Bem Vindo usuário não logado!`;
     document.getElementById('email_res').innerHTML = `usuário não logado`;
     document.getElementById('senha_res').innerHTML = `usuário não logado`;
