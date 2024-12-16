@@ -7,7 +7,8 @@ const allowedOrigins = ['https://login-nodejs-brown.vercel.app']
 export function routes(app) {
     app.use(express.json());
     app.use(cors({
-        origin: allowedOrigins
+        origin: allowedOrigins,
+        methods: ['GET', 'POST', 'PUT', 'DELETE']
     }));
 
     app.get('/getInfo/:id', pegarContaId);
