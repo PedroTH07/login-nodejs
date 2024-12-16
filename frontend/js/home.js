@@ -4,8 +4,8 @@ const btnAtualizar = document.getElementById('btnAtualizacao');
 const btnSair = document.getElementById('btnSair');
 
 async function atualizarConta() {
-    const inpNovoEmail = document.getElementById('emailAtulizacao');
-    const inpNovaSenha = document.getElementById('senhaAtulizacao');
+    const inpNovoEmail = document.getElementById('emailAtualizacao');
+    const inpNovaSenha = document.getElementById('senhaAtualizacao');
     const novoEmail = inpNovoEmail.value;
     const novaSenha = inpNovaSenha.value;
     
