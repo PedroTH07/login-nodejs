@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import { atualizarConta, criarConta, pegarContaId, pegarUmaConta } from "../controllers/loginControllers.js";
 
-const allowedOrigins = ['https://login-nodejs-brown.vercel.app']
+const allowedOrigins = ['https://login-nodejs-brown.vercel.app', 'https://login-nodejs-brown.vercel.app/html/homepage.html']
 
 export function routes(app) {
     app.use(express.json());
