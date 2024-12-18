@@ -21,7 +21,7 @@ async function atualizarConta() {
         const response = await fetch(`https://login-nodejs-api.onrender.com/update/${userId}`,{
             method: 'PUT',
             headers: {'Content-Type': 'application/json'},
-            body: newData
+            body: JSON.stringify(newData)
         });
         if (response.status === 200) {
             const data = await response.json();
